@@ -30,9 +30,16 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Set up the Toolbar
         setUpToolbar();
 
+        setUpTabs();
+
+        setUpFAB();
+
+        setUpNavigationDrawer();
+    }
+
+    private void setUpTabs() {
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the activity.
         mSectionsPagerAdapter = new SectionAdapter(getSupportFragmentManager());
@@ -43,12 +50,6 @@ public class MainActivity extends AppCompatActivity
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
-
-
-
-        setUpFAB();
-
-        setUpNavigationDrawer(mToolbar);
     }
 
     private void setUpToolbar() {
@@ -57,10 +58,10 @@ public class MainActivity extends AppCompatActivity
     }
 
 
-    private void setUpNavigationDrawer(Toolbar toolbar) {
+    private void setUpNavigationDrawer() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+                this, drawer, mToolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
