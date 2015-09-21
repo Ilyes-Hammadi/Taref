@@ -21,6 +21,9 @@ import com.cortexia.taref.adapter.SectionAdapter;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+
+    /* Ceci est un commentaire
+    * Pour voir la réaction d'un PUSH/PULL sur GitHub*/
     private Toolbar mToolbar;
     private SectionAdapter mSectionsPagerAdapter;
     private ViewPager mViewPager;
