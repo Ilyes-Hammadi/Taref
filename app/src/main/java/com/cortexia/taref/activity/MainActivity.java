@@ -53,6 +53,13 @@ public class MainActivity extends AppCompatActivity
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
+
+        // Set the icons on the TabLayout
+        tabLayout.getTabAt(0).setIcon(R.drawable.ic_cat_white_36dp);
+        tabLayout.getTabAt(1).setIcon(R.drawable.ic_brightness_1_white_36dp);
+        tabLayout.getTabAt(2).setIcon(R.drawable.ic_pine_tree_white_36dp);
+
+
     }
 
     private void setUpToolbar() {
