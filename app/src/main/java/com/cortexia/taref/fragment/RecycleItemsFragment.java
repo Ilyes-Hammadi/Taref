@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.cortexia.taref.R;
+import com.cortexia.taref.adapter.ItemsRecycleAdapter;
 import com.cortexia.taref.model.Item;
 
 import java.util.ArrayList;
