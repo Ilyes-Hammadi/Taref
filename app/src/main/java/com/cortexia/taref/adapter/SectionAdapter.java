@@ -8,13 +8,15 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
+import com.cortexia.taref.R;
 import com.cortexia.taref.fragment.RecycleItemsFragment;
+import com.github.saiff35.livingtabs.LivingTabsLayout;
 
 /**
  * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
  * one of the sections/tabs/pages.
  */
-public class SectionAdapter extends FragmentPagerAdapter {
+public class SectionAdapter extends FragmentPagerAdapter implements LivingTabsLayout.DrawableResIconAdapter {
 
     public SectionAdapter(FragmentManager fm) {
         super(fm);
@@ -35,6 +37,33 @@ public class SectionAdapter extends FragmentPagerAdapter {
 
     @Override
     public CharSequence getPageTitle(int position) {
+        switch (position) {
+            case 0:
+                return "Animeaux";
+            case 1:
+                return "Planets";
+            case 2:
+                return "Plantes";
+        }
+
+
         return null;
     }
+
+    @Override
+    public int getIcon(int position) {
+
+
+        switch (position) {
+            case 0:
+                return R.drawable.ic_cat_white_36dp;
+            case 1:
+                return R.drawable.ic_brightness_1_white_36dp;
+            case 2:
+                return R.drawable.ic_pine_tree_white_36dp;
+        }
+        return -1;
+    }
+
+
 }

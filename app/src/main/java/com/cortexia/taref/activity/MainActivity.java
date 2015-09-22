@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
-import android.support.design.widget.TabLayout;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
@@ -17,6 +16,7 @@ import android.view.View;
 
 import com.cortexia.taref.R;
 import com.cortexia.taref.adapter.SectionAdapter;
+import com.github.saiff35.livingtabs.LivingTabsLayout;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -52,14 +52,14 @@ public class MainActivity extends AppCompatActivity
         mViewPager = (ViewPager) findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
 
-        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
+        LivingTabsLayout tabLayout = (LivingTabsLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
 
 
-        // Set the icons on the TabLayout
-        tabLayout.getTabAt(0).setIcon(R.drawable.ic_cat_white_36dp);
-        tabLayout.getTabAt(1).setIcon(R.drawable.ic_brightness_1_white_36dp);
-        tabLayout.getTabAt(2).setIcon(R.drawable.ic_pine_tree_white_36dp);
+//        // Set the icons on the TabLayout
+//        tabLayout.getTabAt(0).setIcon(R.drawable.ic_cat_white_36dp);
+//        tabLayout.getTabAt(1).setIcon(R.drawable.ic_brightness_1_white_36dp);
+//        tabLayout.getTabAt(2).setIcon(R.drawable.ic_pine_tree_white_36dp);
 
 
 
