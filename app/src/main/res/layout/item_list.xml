@@ -12,8 +12,9 @@
 
         <ImageView
             android:id="@+id/item_image_iv"
-            android:background="@color/teal_500"
+            android:background="@drawable/elephant"
             android:layout_width="match_parent"
+            android:scaleType="centerCrop"
             android:layout_height="150dp" />
 
 

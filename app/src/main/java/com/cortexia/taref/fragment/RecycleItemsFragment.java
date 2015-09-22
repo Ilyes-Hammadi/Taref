@@ -1,6 +1,7 @@
 package com.cortexia.taref.fragment;
 
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
@@ -27,6 +28,7 @@ public class RecycleItemsFragment extends android.support.v4.app.Fragment {
 
     private List<Item> fakeData = new ArrayList<>();
 
+    @SuppressLint("ValidFragment")
     public RecycleItemsFragment(List<Item> items) {
         // Required empty public constructor
         fakeData = items;

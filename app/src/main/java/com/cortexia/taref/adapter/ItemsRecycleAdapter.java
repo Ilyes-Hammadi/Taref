@@ -6,6 +6,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.cortexia.taref.R;
@@ -53,6 +54,7 @@ public class ItemsRecycleAdapter extends RecyclerView.Adapter<ItemsRecycleAdapte
     class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         // Set the view ref here
+        ImageView imageIV;
         TextView nameTV;
 
         public MyViewHolder(View itemView) {
@@ -61,7 +63,7 @@ public class ItemsRecycleAdapter extends RecyclerView.Adapter<ItemsRecycleAdapte
 
             // Get refrence to view ( findViewByid())
             nameTV = (TextView) itemView.findViewById(R.id.item_name_tv);
-
+            imageIV = (ImageView) itemView.findViewById(R.id.item_image_iv);
         }
 
         @Override

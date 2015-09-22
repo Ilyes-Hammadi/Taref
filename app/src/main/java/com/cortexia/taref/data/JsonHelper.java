@@ -47,7 +47,7 @@ public class JsonHelper {
             "      \"image\": \"\"\n" +
             "    },\n" +
             "    {\n" +
-            "      \"nom\": \"Llama\",\n" +
+            "      \"nom\": \"llama\",\n" +
             "      \"text\": \"Like guanacos and vicunas, llamas live in the Andes Mountains of South America. They are the largest of these three animal species. Llamas are a domesticated descendant of guanacos. For thousands of years, llamas have been used as pack animals. They are strong, and are able to move along narrow mountain paths with ease. They also were used for food, leather, and their fur, which can be made into rope.\",\n" +
             "      \"image\": \"\"\n" +
             "    }\n" +
