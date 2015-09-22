@@ -27,8 +27,9 @@ public class RecycleItemsFragment extends android.support.v4.app.Fragment {
 
     private List<Item> fakeData = new ArrayList<>();
 
-    public RecycleItemsFragment() {
+    public RecycleItemsFragment(List<Item> items) {
         // Required empty public constructor
+        fakeData = items;
     }
 
     @Override
@@ -40,7 +41,6 @@ public class RecycleItemsFragment extends android.support.v4.app.Fragment {
         // Set up Recycle View
         mListItemsRV = (RecyclerView) mRoot.findViewById(R.id.list_item_rv);
         mListItemsRV.setLayoutManager(setUpLayoutManager());
-        setFakeData();
         mListItemsRV.setAdapter(new ItemsRecycleAdapter(getActivity(), fakeData));
 
         return mRoot;

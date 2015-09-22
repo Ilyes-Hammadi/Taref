@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity
         setUpFAB();
 
         setUpNavigationDrawer();
+
     }
 
     private void setUpTabs() {

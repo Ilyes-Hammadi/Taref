@@ -9,6 +9,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
 import com.cortexia.taref.R;
+import com.cortexia.taref.data.JsonHelper;
 import com.cortexia.taref.fragment.RecycleItemsFragment;
 import com.github.saiff35.livingtabs.LivingTabsLayout;
 
@@ -24,9 +25,22 @@ public class SectionAdapter extends FragmentPagerAdapter implements LivingTabsLa
 
     @Override
     public Fragment getItem(int position) {
+        JsonHelper jsonHelper = new JsonHelper();
+
         // getItem is called to instantiate the fragment for the given page.
         // Return a PlaceholderFragment (defined as a static inner class below).
-        return new RecycleItemsFragment();
+
+        switch (position) {
+
+            case 0:
+                return new RecycleItemsFragment(jsonHelper.getAnimals());
+            case 1:
+                return new RecycleItemsFragment(jsonHelper.getAnimals());
+            case 2:
+                return new RecycleItemsFragment(jsonHelper.getAnimals());
+        }
+
+        return null;
     }
 
     @Override
