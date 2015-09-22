@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity
     private Toolbar mToolbar;
     private SectionAdapter mSectionsPagerAdapter;
     private ViewPager mViewPager;
+    private DrawerLayout mDrawer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,10 +55,13 @@ public class MainActivity extends AppCompatActivity
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
 
+
         // Set the icons on the TabLayout
         tabLayout.getTabAt(0).setIcon(R.drawable.ic_cat_white_36dp);
         tabLayout.getTabAt(1).setIcon(R.drawable.ic_brightness_1_white_36dp);
         tabLayout.getTabAt(2).setIcon(R.drawable.ic_pine_tree_white_36dp);
+
+
 
 
     }
@@ -68,10 +72,10 @@ public class MainActivity extends AppCompatActivity
     }
 
     private void setUpNavigationDrawer() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        mDrawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, mToolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.setDrawerListener(toggle);
+                this, mDrawer, mToolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        mDrawer.setDrawerListener(toggle);
         toggle.syncState();
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
@@ -127,20 +131,17 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camara) {
+        if (id == R.id.nav_animeaux) {
             // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
-
-        } else if (id == R.id.nav_slideshow) {
-
-        } else if (id == R.id.nav_manage) {
-
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
-
+            mViewPager.setCurrentItem(0);
+            mDrawer.closeDrawers();
+        } else if (id == R.id.nav_planet) {
+            mViewPager.setCurrentItem(1);
+            mDrawer.closeDrawers();
+        } else if (id == R.id.nav_plante) {
+            mViewPager.setCurrentItem(2);
+            mDrawer.closeDrawers();
         }
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;

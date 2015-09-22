@@ -1,6 +1,7 @@
 package com.cortexia.taref.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.cortexia.taref.R;
+import com.cortexia.taref.activity.DetailActivity;
 import com.cortexia.taref.model.Item;
 
 import java.util.Collections;
@@ -65,6 +67,7 @@ public class ItemsRecycleAdapter extends RecyclerView.Adapter<ItemsRecycleAdapte
         @Override
         public void onClick(View v) {
             // Setup the click on a single item from the list
+            mInflater.getContext().startActivity(new Intent(mInflater.getContext(), DetailActivity.class));
         }
     }
 
