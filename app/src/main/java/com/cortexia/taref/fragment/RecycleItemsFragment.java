@@ -34,6 +34,11 @@ public class RecycleItemsFragment extends android.support.v4.app.Fragment {
         fakeData = items;
     }
 
+
+    public RecycleItemsFragment() {
+        setFakeData();
+    }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

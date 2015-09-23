@@ -35,9 +35,9 @@ public class SectionAdapter extends FragmentPagerAdapter implements LivingTabsLa
             case 0:
                 return new RecycleItemsFragment(jsonHelper.getAnimals());
             case 1:
-                return new RecycleItemsFragment(jsonHelper.getAnimals());
+                return new RecycleItemsFragment();
             case 2:
-                return new RecycleItemsFragment(jsonHelper.getAnimals());
+                return new RecycleItemsFragment();
         }
 
         return null;

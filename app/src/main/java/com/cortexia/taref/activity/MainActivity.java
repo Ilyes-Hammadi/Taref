@@ -34,6 +34,8 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+
         setUpToolbar();
 
         setUpTabs();
@@ -53,18 +55,9 @@ public class MainActivity extends AppCompatActivity
         mViewPager = (ViewPager) findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
 
+        // Set up the TabLayout (externel lib)
         LivingTabsLayout tabLayout = (LivingTabsLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
-
-
-//        // Set the icons on the TabLayout
-//        tabLayout.getTabAt(0).setIcon(R.drawable.ic_cat_white_36dp);
-//        tabLayout.getTabAt(1).setIcon(R.drawable.ic_brightness_1_white_36dp);
-//        tabLayout.getTabAt(2).setIcon(R.drawable.ic_pine_tree_white_36dp);
-
-
-
-
     }
 
     private void setUpToolbar() {
@@ -84,7 +77,7 @@ public class MainActivity extends AppCompatActivity
     }
 
     private void setUpFAB() {
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        final FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
