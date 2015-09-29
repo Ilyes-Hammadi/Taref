@@ -5,10 +5,19 @@ package com.cortexia.taref.model;
  */
 public class Item {
 
+    private long _id;
     private String name;
     private String text;
     private int image;
 
+
+    public long get_id() {
+        return _id;
+    }
+
+    public void set_id(long _id) {
+        this._id = _id;
+    }
 
     public String getName() {
         return name;
