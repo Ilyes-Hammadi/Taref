@@ -63,6 +63,8 @@ public class ItemsRecycleAdapter extends RecyclerView.Adapter<ItemsRecycleAdapte
             // Get refrence to view ( findViewByid())
             nameTV = (TextView) itemView.findViewById(R.id.item_name_tv);
             imageIV = (ImageView) itemView.findViewById(R.id.item_image_iv);
+
+
         }
 
         @Override
