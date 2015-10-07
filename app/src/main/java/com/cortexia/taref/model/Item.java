@@ -11,6 +11,16 @@ public class Item {
     private int image;
 
 
+    public Item() {
+
+    }
+
+    public Item(String name, String text, int image) {
+        this.name = name;
+        this.text = text;
+        this.image = image;
+    }
+
     public long get_id() {
         return _id;
     }

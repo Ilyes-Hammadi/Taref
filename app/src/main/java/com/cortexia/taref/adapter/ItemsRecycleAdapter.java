@@ -43,6 +43,7 @@ public class ItemsRecycleAdapter extends RecyclerView.Adapter<ItemsRecycleAdapte
 
         // Setting the views to reflect the data we need to display
         holder.nameTV.setText(object.getName());
+        holder.imageIV.setImageResource(object.getImage());
     }
 
     @Override

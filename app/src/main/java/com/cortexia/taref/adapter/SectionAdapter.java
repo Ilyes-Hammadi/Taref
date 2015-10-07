@@ -9,6 +9,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
 import com.cortexia.taref.R;
+import com.cortexia.taref.data.ItemsData;
 import com.cortexia.taref.data.JsonHelper;
 import com.cortexia.taref.fragment.RecycleItemsFragment;
 import com.github.saiff35.livingtabs.LivingTabsLayout;
@@ -33,7 +34,7 @@ public class SectionAdapter extends FragmentPagerAdapter implements LivingTabsLa
         switch (position) {
 
             case 0:
-                return new RecycleItemsFragment(jsonHelper.getAnimals());
+                return new RecycleItemsFragment(ItemsData.getAnimals());
             case 1:
                 return new RecycleItemsFragment();
             case 2:
