@@ -44,6 +44,9 @@ public class ItemsRecycleAdapter extends RecyclerView.Adapter<ItemsRecycleAdapte
         // Setting the views to reflect the data we need to display
         holder.nameTV.setText(object.getName());
         holder.imageIV.setImageResource(object.getImage());
+
+
+
     }
 
     @Override
@@ -71,7 +74,12 @@ public class ItemsRecycleAdapter extends RecyclerView.Adapter<ItemsRecycleAdapte
         @Override
         public void onClick(View v) {
             // Setup the click on a single item from the list
-            mInflater.getContext().startActivity(new Intent(mInflater.getContext(), DetailActivity.class));
+            Intent intent = new Intent(mInflater.getContext() , DetailActivity.class);
+
+            intent.putExtra("position", String.valueOf(getPosition()));
+
+            mInflater.getContext().startActivity(intent);
+
         }
     }
 
